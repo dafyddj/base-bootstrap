@@ -68,7 +68,7 @@ jobs:
       checks: read
     runs-on: ubuntu-latest
     steps:
-      - uses: poseidon/wait-for-status-checks@v0.4.1
+      - uses: poseidon/wait-for-status-checks@6988432d64ad3f9c2608db4ca16fded1b7d36ead # v0.5.0
         with:
           ignore: Collect results
           token: ${{ secrets.GITHUB_TOKEN }}
