@@ -13,6 +13,14 @@
     "helpers:pinGitHubActionDigests",
     "regexManagers:githubActionsVersions",
   ],
+  "customDatasources": {
+    "python-versions": {
+      "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/actions/python-versions/refs/heads/main/versions-manifest.json",
+      "transformTemplates": [
+        "{\"releases\": $ }",
+      ],
+    },
+  },
   "packageRules": [
     {
       "matchPackageNames": ["actions/python-versions"],
