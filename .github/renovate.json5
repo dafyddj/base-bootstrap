@@ -13,6 +13,7 @@
     "helpers:pinGitHubActionDigests",
     "regexManagers:githubActionsVersions",
   ],
+  "automergeStrategy": "merge-commit",
   "customDatasources": {
     "python-versions": {
       "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/actions/python-versions/refs/heads/main/versions-manifest.json",
