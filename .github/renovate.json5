@@ -11,31 +11,43 @@
     ':enablePreCommit',
     ':semanticCommitTypeAll(fix)',
     'helpers:pinGitHubActionDigests',
-    'regexManagers:githubActionsVersions',
+    'customManagers:githubActionsVersions',
   ],
   automergeStrategy: 'merge-commit',
   customDatasources: {
     'python-versions': {
       defaultRegistryUrlTemplate: 'https://raw.githubusercontent.com/actions/python-versions/refs/heads/main/versions-manifest.json',
       transformTemplates: [
-        '{\"releases\": $ }',
+        '{"releases": $ }',
       ],
     },
   },
   packageRules: [
     {
-      matchPackageNames: ['actions/python-versions'],
+      matchPackageNames: [
+        'actions/python-versions',
+      ],
       separateMinorPatch: true,
     },
     {
-      matchManagers: ['github-actions'],
-      matchUpdateTypes: ['minor', 'patch'],
+      matchManagers: [
+        'github-actions',
+      ],
+      matchUpdateTypes: [
+        'minor',
+        'patch',
+      ],
       groupName: 'github-actions minor/patch',
       automerge: true,
     },
     {
-      matchManagers: ['pre-commit'],
-      matchUpdateTypes: ['minor', 'patch'],
+      matchManagers: [
+        'pre-commit',
+      ],
+      matchUpdateTypes: [
+        'minor',
+        'patch',
+      ],
       groupName: 'pre-commit hook minor/patch',
       automerge: true,
     },
