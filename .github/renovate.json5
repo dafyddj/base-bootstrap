@@ -9,4 +9,12 @@
     ':automergeStableNonMajor',
     ':semanticCommitTypeAll(fix)',
   ],
+  packageRules: [
+    {
+      matchDepNames: ['python-jsonschema/check-jsonschema'],
+      extends: [
+        ':automergeMinor',
+      ],
+    },
+  ],
 }
