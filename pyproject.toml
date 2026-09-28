@@ -1,0 +1,14 @@
+[project]
+name = "base-bootstrap"
+version = "0.0.0"
+requires-python = ">=3.10"
+dependencies = []
+
+[dependency-groups]
+test = [
+  "copier==9.18.2",
+  "texttest==4.4.7",
+]
+
+[tool.uv]
+package = false
