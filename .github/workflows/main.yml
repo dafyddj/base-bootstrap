@@ -42,9 +42,10 @@ jobs:
       - uses: jdx/mise-action@v4.3.0
       - name: Debug on runner (When re-run with "Enable debug logging" checked)
         if: runner.debug
-        uses: mxschmitt/action-tmate@35b54afac29c97fb54faba5b513f8fbd1882f113 # v3.24
+        uses: owenthereal/action-upterm@v2.3.0
         with:
           detached: true
+          limit-access-to-actor: true
       - name: Run `texttest`
         run: uv run texttest -b
   results:
