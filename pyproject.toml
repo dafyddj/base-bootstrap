@@ -5,7 +5,7 @@ requires-python = ">=3.10"
 dependencies = []
 
 [dependency-groups]
-test = [
+dev = [
   "copier==9.18.2",
   "texttest==4.4.7",
 ]
