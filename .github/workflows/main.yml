@@ -42,7 +42,7 @@ jobs:
       - uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
       - name: Debug on runner (When re-run with "Enable debug logging" checked)
         if: runner.debug
-        uses: owenthereal/action-upterm@41ec120391a17f0dbc38ba074d19245e925855bf # v2.3.0
+        uses: owenthereal/action-upterm@7df5fa550d6dc458335f4b2685452a0e42d0ba7e # v2.4.0
         with:
           detached: true
           limit-access-to-actor: true
